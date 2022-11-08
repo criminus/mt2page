@@ -21,7 +21,7 @@ $form_repwd = "Confirmare parolă";
 $reg = "Înregistrare";
 
 //Confirmare detalii (SHOW_DETAILS)
-$conf_acc = [
+const CONF_ACC = [
     "CONF_DATA" => "Datele înregistrate:",
     "ACCOUNT" => "Nume cont: ",
     "EMAIL" => "Adresă de email: ",

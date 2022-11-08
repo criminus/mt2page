@@ -43,8 +43,6 @@ function formProcess() {
             $createAccount .= "VALUES ('$account', '$email', '$social_id', PASSWORD('$password'))";
             $result = mysqli_query($connection, $createAccount) or die('Query failed' . mysqli_error($connection));
 
-
-            global $conf_acc;
             if (!$result) {
                 errorBox("Ceva a mers prost!");
             } else {
@@ -53,21 +51,21 @@ function formProcess() {
                     echo '<div class="alert alert-success" role="alert"><table class="table">
                     <thead>
                       <tr>
-                        <th scope="col">'. $conf_acc['CONF_DATA'] .'</th>
+                        <th scope="col">'. CONF_ACC['CONF_DATA'] .'</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">'. $conf_acc['ACCOUNT'] . $account . '</th>
+                        <th scope="row">'. CONF_ACC['ACCOUNT'] . $account . '</th>
                       </tr>
                       <tr>
-                        <th scope="row">'. $conf_acc['EMAIL'] . $email . '</th>
+                        <th scope="row">'. CONF_ACC['EMAIL'] . $email . '</th>
                       </tr>
                       <tr>
-                        <th scope="row">'. $conf_acc['SECURITY'] . $social_id . '</th>
+                        <th scope="row">'. CONF_ACC['SECURITY'] . $social_id . '</th>
                       </tr>
                       <tr>
-                        <th scope="row">'. $conf_acc['PASSWORD'] . $password . '</th>
+                        <th scope="row">'. CONF_ACC['PASSWORD'] . $password . '</th>
                       </tr>
                     </tbody>
                   </table></div>
