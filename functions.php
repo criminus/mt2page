@@ -17,11 +17,19 @@ function formProcess() {
         $password = $_POST['password'];
         $repassword = $_POST['repassword'];
 
+        //mysqli_real_escape_string
+        $new_account = mysqli_real_escape_string($connection, $account);
+        $new_email = mysqli_real_escape_string($connection, $email);
+        $new_social_id =mysqli_real_escape_string($connection, $social_id);
+        $new_password = mysqli_real_escape_string($connection, $password);
+
         //Check if username is already in the database.
         $checkUser = "SELECT login FROM account.account WHERE login='{$account}'";
         $usrCheck = mysqli_query($connection, $checkUser) or die('Query failed' . mysqli_error($connection));
 
-        if (strlen($account) < LOGIN_MIN_LEN) {
+        if (!ctype_alnum($new_account)) {
+            errorBox("Numele de utilizator nu poate conține caractere speciale!");
+        } elseif (strlen($account) < LOGIN_MIN_LEN) {
             errorBox("Numele de utilizator este prea mic!");
         } elseif(strlen($account) > LOGIN_MAX_LEN) {
             errorBox("Numele de utilizator este prea mare!");
@@ -40,7 +48,7 @@ function formProcess() {
         } elseif($account && $email && $social_id && $password) {
             //Trecem de verificări și dacă datele sunt valide, atunci facem contul în sfârșit.
             $createAccount = "INSERT INTO account.account(login, email, social_id, password) ";
-            $createAccount .= "VALUES ('$account', '$email', '$social_id', PASSWORD('$password'))";
+            $createAccount .= "VALUES ('$new_account', '$new_email', '$new_social_id', PASSWORD('$new_password'))";
             $result = mysqli_query($connection, $createAccount) or die('Query failed' . mysqli_error($connection));
 
             if (!$result) {
