@@ -18,26 +18,26 @@ include("functions.php");
         <form class="bg-light p-5 shadow rounded form-signin" role="form" action="index.php" method="post">
             <?php welcomeMessage(); ?>
             <div class="form-group">
-                <label for="username"><?php echo $form_account; ?></label>
+                <label for="username"><?php echo FORM_LANG['FORM_ACC']; ?></label>
                 <input type="text" name="username" class="form-control">
             </div>
             <div class="form-group">
-                <label for="email"><?php echo $form_email; ?></label>
+                <label for="email"><?php echo FORM_LANG['FORM_EMAIL']; ?></label>
                 <input type="text" name="email" class="form-control">
             </div>
             <div class="form-group">
-                <label for="social_id"><?php echo $form_delete; ?></label>
+                <label for="social_id"><?php echo FORM_LANG['FORM_DELETE']; ?></label>
                 <input type="text" name="social_id" class="form-control">
             </div>
             <div class="form-group">
-                <label for="password"><?php echo $form_pwd; ?></label>
+                <label for="password"><?php echo FORM_LANG['FORM_PWD']; ?></label>
                 <input type="password" name="password" class="form-control">
             </div>
             <div class="form-group">
-                <label for="repassword"><?php echo $form_repwd; ?></label>
+                <label for="repassword"><?php echo FORM_LANG['FORM_REPWD']; ?></label>
                 <input type="password" name="repassword" class="form-control">
             </div>
-            <input class="btd btn-primary" type="submit" name="submit" value="<?php echo $reg; ?>">
+            <input class="btd btn-primary" type="submit" name="submit" value="<?php echo FORM_LANG['REGISTER']; ?>">
             <br />
             <br />
             <?php formProcess(); ?>

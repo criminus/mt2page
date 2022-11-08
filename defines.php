@@ -13,12 +13,14 @@ const SECURITY = 7;
 
 
 //Traducere formular
-$form_account = "Numele contului";
-$form_email = "Adresă de email";
-$form_delete = "Cod de ștergere caracter";
-$form_pwd = "Parolă";
-$form_repwd = "Confirmare parolă";
-$reg = "Înregistrare";
+const FORM_LANG = [
+    "FORM_ACC" => "Numele contului",
+    "FORM_EMAIL" => "Adresă de email",
+    "FORM_DELETE" => "Cod de ștergere caracter",
+    "FORM_PWD" => "Parolă",
+    "FORM_REPWD" => "Confirmare parolă",
+    "REGISTER" => "Înregistrare"
+];
 
 //Confirmare detalii (SHOW_DETAILS)
 const CONF_ACC = [
