@@ -20,7 +20,7 @@ function formProcess() {
         //mysqli_real_escape_string
         $new_account = mysqli_real_escape_string($connection, $account);
         $new_email = mysqli_real_escape_string($connection, $email);
-        $new_social_id =mysqli_real_escape_string($connection, $social_id);
+        $new_social_id = mysqli_real_escape_string($connection, $social_id);
         $new_password = mysqli_real_escape_string($connection, $password);
 
         //Check if username is already in the database.
