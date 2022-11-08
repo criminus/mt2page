@@ -5,3 +5,5 @@ Pagină simplă de înregistrare pentru servere de metin2.
 Fișierul config.php include explicația pentru conectarea la baza de date.
 
 (c) Hunger aka Criminus 2022
+
+![alt text](http://i.epvpimg.com/rkWIaab.png)
