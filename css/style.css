@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: url("bg.png") no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    top: 5%;
+    position: relative;
+}
+
+.container {
+    max-width: 500px;
+}
